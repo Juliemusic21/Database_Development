@@ -18,9 +18,7 @@ config = {
 
 try:
     db = mysql.connector.connect(**config)
-
     print("\n Database user {} connected to MySQL on host {} with database {}".format(config['user'], config['host'], config['database']))
-
     input("\n Press any key to continue...")
 
 except mysql.connector.Error as err:
@@ -76,3 +74,4 @@ for table_name, title in tables:
 # Close the cursor and database connection
 cursor.close()
 db.close()
+
